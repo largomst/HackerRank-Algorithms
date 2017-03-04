@@ -2,7 +2,6 @@
 
 import sys
 
-
 h = list(map(int, input().strip().split(' ')))
 word = input().strip()
 word_height_list = list()
