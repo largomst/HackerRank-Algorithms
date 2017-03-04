@@ -12,5 +12,5 @@ dist
 build
 
 # vscode:
-tag
+tags
 .vscode/
