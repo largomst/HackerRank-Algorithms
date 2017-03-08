@@ -1,10 +1,15 @@
 import math
-n = int(input().strip())
-for i in range(n):
-    arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
-    count = 0
-    for a in range(arr[0], arr[1] + 1):
-        a_sqrt = math.sqrt(a)
-        if a_sqrt == int('%.0f' % a_sqrt):
-            count += 1
-    print(count)
+t = int(input().strip())
+
+for t0 in range(t):
+    a, b = input().strip().split(' ')
+    a, b = int(a), int(b)
+
+    a_sqrt = math.sqrt(a)
+    if a_sqrt == int('%.0f' % a_sqrt):
+        pass
+    else:
+        a_sqrt = int(a_sqrt) + 1
+    li = [i * i for i in range(a_sqrt, int(math.sqrt(b)) + 1)]
+    # print(li)
+    print(len(li))
