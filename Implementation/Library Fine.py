@@ -15,10 +15,6 @@ def isLeapYear(year):
         return False
 
 
-month = [None, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-if isLeapYear(y1):
-    month[2] = 29
-
 fine = 0
 
 if y1 > y2:
