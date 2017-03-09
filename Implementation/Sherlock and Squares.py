@@ -5,11 +5,12 @@ for t0 in range(t):
     a, b = input().strip().split(' ')
     a, b = int(a), int(b)
 
-    a_sqrt = math.sqrt(a)
-    if a_sqrt == int('%.0f' % a_sqrt):
-        pass
+    a = math.sqrt(a)
+    if a != int(a):
+        a = int(a) + 1
     else:
-        a_sqrt = int(a_sqrt) + 1
-    li = [i * i for i in range(a_sqrt, int(math.sqrt(b)) + 1)]
-    # print(li)
-    print(len(li))
+        a = int(a)
+
+    b = int(math.sqrt(b))
+    lis = [x * x for x in range(a, b + 1)]
+    print(len(lis))
