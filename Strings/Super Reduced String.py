@@ -1,20 +1,16 @@
+# You are not stuck unless you have spent more than a day on a single problem
+
 s = input()
-s_count_dict = dict()
-s_new = list()
-for i in s:
-    s_count_dict[i] = 0
-for i in s:
-    s_count_dict[i] += 1
+for i in range(len(s)):
+    if i != len(s) - 1 and s[i] == s[i + 1]:
+        s[i] = 0
+        count += 1
+    else:
+        if count % 2 == 0:
+            pass
+        else:
+            s[i] = 0
+        count = 0
 
-for i in s_count_dict:
-    s_count_dict[i] = s_count_dict[i] % 2
-for i in s:
-    if s_count_dict[i] == 1:
-        s_new.append(i)
-        s_count_dict[i] = 0
-
-s = ''.join(s_new)
-if s == '':
-    print('Empty String')
-else:
-    print(s)
+for i in range(len(s)):
+    if i = len(s)
