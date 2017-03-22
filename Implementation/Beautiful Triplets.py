@@ -1,11 +1,18 @@
 n, d = input().strip().split(' ')
 n, d = int(n), int(d)
 a = list(map(int, input().strip().split(' ')))
-count = 0
+
+pairs = list()
+
 for i in range(n):
     for j in range(i, n):
-        for k in range(j, n):
-            if a[j] - a[i] == a[k] - a[j] and a[k] - a[j] == d:
-                count += 1
+        if d == a[j] - a[i]:
+            pairs.append((a[j], a[i]))
 
-print(count)
+result = []
+for i in range(len(pairs)):
+    for j in range(i, len(pairs)):
+        if pairs[i][0] == pairs[j][1]:
+            result.append((pairs[i][1], pairs[i][0], pairs[j][1]))
+
+print(len(result))
