@@ -1,11 +1,10 @@
-# TODO fix time out
-
 def solution(a):
     ok = True
-    for i in range(len(a) - 1):
-        for j in range(len(a) - 1 - i):
-            if a[j] > a[j + 1] and abs(a[j] - a[j + 1]) == 1:
-                a[j], a[j + 1] = a[j + 1], a[j]
+    for i in range(len(a) - 2):
+        if a[i] > a[i + 1] and abs(a[i] - a[i + 1]) == 1:
+            a[i], a[i + 1] = a[i + 1], a[i]
+        if a[i + 1] > a[i + 2] and abs(a[i + 1] - a[i + 2]) == 1:
+            a[i + 1], a[i + 2] = a[i + 2], a[i + 1]
 
     for i in range(len(a) - 1):
         if a[i] > a[i + 1]:
