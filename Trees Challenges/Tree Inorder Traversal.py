@@ -6,11 +6,11 @@ self.data (the value of the node)
 """
 
 
-def preOrder(root):
+def inOrder(root):
     if root is None:
         return
     if root.left is not None:
-        preOrder(root.left)
+        inOrder(root.left)
     print(root.data, end=' ')
     if root.right is not None:
-        preOrder(root.right)
+        inOrder(root.right)
